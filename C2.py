@@ -18,11 +18,9 @@ unique, counts = np.unique(test, return_counts=True)
 print test.shape
 print unique[counts.argmax()]
 print counts.max()
-
-cv2.imshow('Image', s)
-cv2.waitKey(0)
-cv2.destroyAllWindows()
-
 histr = cv2.calcHist([s], [2], None, [256], [0,256])
-plt.plot(histr)
-plt.show()
+
+plt.subplot(121), plt.imshow(s)
+plt.xticks([]), plt.yticks([])
+
+plt.subplot(122), plt.hist(s[:,:,2].ravel(), 256, [0,256]); plt.show()
