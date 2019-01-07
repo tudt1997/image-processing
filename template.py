@@ -3,7 +3,7 @@ import numpy as np
 import matplotlib
 from matplotlib import pyplot as plt
 
-img = cv2.imread('', 0)
+img = cv2.imread('')
 
 rows, cols, channels = img.shape
 
