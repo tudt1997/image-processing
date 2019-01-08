@@ -18,7 +18,6 @@ unique, counts = np.unique(test, return_counts=True)
 print test.shape
 print unique[counts.argmax()]
 print counts.max()
-histr = cv2.calcHist([s], [2], None, [256], [0,256])
 
 plt.subplot(121), plt.imshow(s)
 plt.xticks([]), plt.yticks([])
